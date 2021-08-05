@@ -63,6 +63,9 @@ section {
   justify-content: center;
   align-content: center;
 }
+.bg{
+  width: 100%;
+}
 section::before {
   content: "";
   position: absolute;
@@ -72,26 +75,29 @@ section::before {
   background: linear-gradient(to top, #000, transparent);
   z-index: 1000;
 }
+.animation {
+  position: relative;
+  z-index: 20;
+}
 #text {
   position: absolute;
   white-space: nowrap;
   color: #fff;
   font-size: 5vw;
-  z-index: 9;
   -webkit-animation: slide-top-1 2s both;
   animation: slide-top-1 2s both;
   transform: translateY(300px);
   overflow: hidden;
+}
+h1 p {
+  text-indent: 19vw;
+  font-size: 3vw;
 }
 #text2 {
   position: absolute;
   white-space: nowrap;
   color: #fff;
   font-size: 3vw;
-  z-index: 8;
-  transform: translateY(380px) translateX(150px);
-  -webkit-animation: slide-top-2 1.85s both;
-  animation: slide-top-2 1.85s both;
   overflow: hidden;
 }
 @-webkit-keyframes slide-top-1 {
@@ -113,35 +119,8 @@ section::before {
     opacity: 0%;
   }
   100% {
-    -webkit-transform: translateY(300px);
-    transform: translateY(300px);
-    opacity: 100%;
-  }
-}
-/* 
- * slide 2 
-*/
-@-webkit-keyframes slide-top-2 {
-  0% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0) translateX(150px);
-    opacity: 0%;
-  }
-  100% {
-    -webkit-transform: translateY(380px) translateX(150px);
-    transform: translateY(380px) translateX(150px);
-    opacity: 100%;
-  }
-}
-@keyframes slide-top-2 {
-  0% {
-    -webkit-transform: translateY(0) translateX(150px);
-    transform: translateY(0) translateX(150px);
-    opacity: 0%;
-  }
-  100% {
-    -webkit-transform: translateY(380px) translateX(150px);
-    transform: translateY(380px) translateX(150px);
+    -webkit-transform: translateY(17vw);
+    transform: translateY(17vw);
     opacity: 100%;
   }
 }
